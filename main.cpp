@@ -34,12 +34,15 @@ int main() {
 		char filename[100];
 
 		switch (choice) {
-			case 1:
+			case 1:// Insert at Head
 				printf("Enter the value to add: ");
 				scanf("%d", &value);
 				insertAtHead(&head, value);
 				break;
-			case 2:
+			case 2:// Insert at Tail
+				printf("Enter the value to add: ");
+				scanf("%d", &value);
+				insertAtTail(&head, value);
 				break;
 			case 3: // Insert at position
 				printf("Enter the position: ");
@@ -59,16 +62,35 @@ int main() {
 				printList(head);
 				system("pause");
 				break;
-
 			case 7: // Delete the last element
+				deleteAtTail(&head);
+				printf("List after deleting the last element:\n");
+				printList(head);
+				system("pause");
 				break;
 			case 8: // Delete at position
+				deleteAtPosition(&head, position);
+				printf("List after deleting an element at a position:\n");
+				printList(head);
+				system("pause");
 				break;
 			case 9: // Delete all occurrences of a value
+				deleteAllKeys(&head, key);
+				printf("List after deleting a specific element:\n");
+				printList(head);
+				system("pause");
 				break;
 			case 10: // Delete after a specific element
+				deleteAfterKeys(&head, key);
+				printf("List after deleting an element after a specific element:\n");
+				printList(head);
+				system("pause");
 				break;
 			case 11: // Delete before a specific element
+				deleteBeforeKeys(&head, key);
+				printf("List after deleting an element before a specific element:\n");
+				printList(head);
+				system("pause");
 				break;
 			case 12:
 				printf("Current linked list: ");
