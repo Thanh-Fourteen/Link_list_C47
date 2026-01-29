@@ -20,6 +20,7 @@ void insertBeforeKeys(Node **head, int value, int key);
 
 void printList(Node *head);
 void freeList(Node **head);
+void loadTestCase(Node **head, const char *file_path);
 
 void deleteAtHead(Node **head);
 void deleteAtTail(Node **head);

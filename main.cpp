@@ -1,6 +1,7 @@
 #include "insert.cpp"
 #include "delete.cpp"
 #include "color.h"
+#include "loadTestCase.cpp"
 
 void menu() {
 	printf("%s+----------------------- Menu -----------------------+%s\n", GREEN, RESET);
@@ -104,11 +105,16 @@ int main() {
 			case 12:
 				printf("Current linked list: ");
 				printList(head);
-			
 				break;
 		
 			case 13: // Load test cases from file
+	            printf("Enter the test case filename: ");
+	            scanf("%s", filename);
+	            loadTestCases(&head, filename);
+	            printf("Test cases loaded successfully.\n");
+	            system("pause");
 				break;
+
 			default:
 				printf("Error choice!\n");
 				break;
